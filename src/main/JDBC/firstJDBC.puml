@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Product{
+String Product_Name
+String Product_Vendor
+List Ingredient
+}
+
+class Ingredient{
+String Ingredient
+String Note
+}
+
+class Vendor{
+String Vendor_Name
+List Product
+}
+
+Product "1"--* Vendor : sell
+Product "1" *--"many" Ingredient : contains
+
+@enduml
